@@ -8,7 +8,7 @@ for i, c in enumerate('()()(()()()(()()((()((()))((()((((()()((((()))()((((())((
         b -= 1
         
     if b == -1 and not was_in_basement:
-        print('Basement ' + str(i+1))
+        print('Santa is in the basement on position ' + str(i+1))
         was_in_basement = True     
         
-print(b)
+print('Santa is on floor {}'.format(b))
