@@ -7,7 +7,8 @@ puzzles = [{'t': '--- Day 1: Not Quite Lisp ---', 'm': 'santa'},
            {'t': '--- Day 4: The Ideal Stocking Stuffer ---', 'm': 'adventcoins'},
            {'t': '--- Day 5: Doesn\'t He Have Intern-Elves For This? ---', 'm': 'nice'},
            {'t': '--- Day 6: Probably a Fire Hazard ---', 'm': 'lights'},
-           {'t': '--- Day 7: Some Assembly Required ---', 'm': 'bit'}
+           {'t': '--- Day 7: Some Assembly Required ---', 'm': 'bit'},
+           {'t': '--- Day 8: Matchsticks ---', 'm': 'match'}
           ]
 
 print('\nAdvent of Code 2015 Solutions\n')
