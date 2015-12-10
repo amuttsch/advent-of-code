@@ -3,13 +3,11 @@ import sys
 
 distances = {}
 
-def read_distances():
-    for line in open('input.txt'):
-        (frm, _, to, _, dist) = line.split(' ')
-        distances.setdefault(frm, {})[to] = int(dist)
-        distances.setdefault(to, {})[frm] = int(dist)
+for line in open('input.txt'):
+    (frm, _, to, _, dist) = line.split(' ')
+    distances.setdefault(frm, {})[to] = int(dist)
+    distances.setdefault(to, {})[frm] = int(dist)
 
-read_distances()
 shortest = sys.maxsize
 longest = 0
 for i in permutations(distances.keys()):
