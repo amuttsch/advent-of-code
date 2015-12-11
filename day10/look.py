@@ -2,7 +2,7 @@ input_sequence = '1113222113'
 
 def look_and_say(times):
     result = sequence = input_sequence
-    for i in range(times):
+    for _ in range(times):
         sequence = result
         current = result = ''
         n = 0
