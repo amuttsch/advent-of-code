@@ -2,6 +2,7 @@
 
 import os
 import importlib
+import sys
 
 puzzles = [{'t': '--- Day 1: Not Quite Lisp ---', 'm': 'santa'},
            {'t': '--- Day 2: I Was Told There Would Be No Math ---', 'm': 'wrapping'},
@@ -17,13 +18,29 @@ puzzles = [{'t': '--- Day 1: Not Quite Lisp ---', 'm': 'santa'},
            {'t': '--- Day 12: JSAbacusFramework.io ---', 'm': 'accounting'}
           ]
 
-print('\nAdvent of Code 2015 Solutions\n')
-
-for i, puzzle in enumerate(puzzles):
-    print(puzzle['t'])
-    day = 'day{:02d}'.format(i+1)
-    os.chdir(day)
-    importlib.import_module(day + '.' + puzzle['m'])
+def execute_day(day):
+    print(puzzles[day-1]['t'])
+    day_dir = 'day{:02d}'.format(day)
+    os.chdir(day_dir)
+    importlib.import_module(day_dir + '.' + puzzles[day-1]['m'])
     os.chdir('..')
 
     print()
+
+print('\n *** Advent of Code 2015 Solutions ***\n')
+
+if len(sys.argv) == 1:
+    for i in range(len(puzzles)):
+        execute_day(i+1)
+elif len(sys.argv) == 2:
+    try:
+        day = int(sys.argv[1])
+        execute_day(day)
+    except ValueError:
+        print('Error: Parameter day must be numeric!')
+    except IndexError:
+        print('Error: Day not found, available days: 1-{}'.format(len(puzzles)))
+else:
+    print('Usage: main.py <day> (optional)')
+
+print()
