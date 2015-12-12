@@ -44,12 +44,14 @@ while not validate_password(next_password):
     next_password = generate_next_password(next_password)
 
 print('Part 1: {}'.format(next_password))
+assert 'vzbxxyzz' == next_password
 
 next_password = generate_next_password(next_password)
 while not validate_password(next_password):
     next_password = generate_next_password(next_password)
 
 print('Part 2: {}'.format(next_password))
+assert 'vzcaabcc' == next_password
 
 # Test for password validator
 assert False == validate_password('hijklmmn')
