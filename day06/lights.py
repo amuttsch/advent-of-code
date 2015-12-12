@@ -24,8 +24,8 @@ with open('input.txt', 'r') as file:
 active_lights = sum(map(sum, lights))
 total_brightness = sum(map(sum, brightness))
 
-print('Active lights: {}'.format(active_lights))
-print('Total brightness: {}'.format(total_brightness))
+print('Part 1: Active lights: {}'.format(active_lights))
+print('Part 2: Total brightness: {}'.format(total_brightness))
 
 assert active_lights == 569999 # Part 1
 assert total_brightness == 17836115 # Part 2
