@@ -1,6 +1,6 @@
-data = open('input.txt').read().replace('\n', '')
+data = open('input.txt').read()
 
-part_1 = sum(map(lambda x: 1 if x == '(' else -1, data))
+part_1 = sum(map(lambda x: 1 if x == '(' else -1, data[:-1]))
 part_2 = 0
 
 floor = 0
