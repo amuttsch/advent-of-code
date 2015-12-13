@@ -15,7 +15,8 @@ puzzles = [{'t': '--- Day 1: Not Quite Lisp ---', 'm': 'santa'},
            {'t': '--- Day 9: All in a Single Night ---', 'm': 'delivery'},
            {'t': '--- Day 10: Elves Look, Elves Say ---', 'm': 'look'},
            {'t': '--- Day 11: Corporate Policy ---', 'm': 'password'},
-           {'t': '--- Day 12: JSAbacusFramework.io ---', 'm': 'accounting'}
+           {'t': '--- Day 12: JSAbacusFramework.io ---', 'm': 'accounting'},
+           {'t': '--- Day 13: Knights of the Dinner Table ---', 'm': 'knights'}
           ]
 
 def execute_day(day):
