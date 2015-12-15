@@ -1,5 +1,5 @@
 from collections import defaultdict
-from itertools import product
+from itertools import combinations_with_replacement, permutations
 
 ingredients = defaultdict(dict)
 teaspoons = 100
@@ -14,17 +14,18 @@ for line in open('input.txt'):
     ingredients[s[0][:-1]][s[7]] = int(s[8][:-1])
     ingredients[s[0][:-1]][s[9]] = int(s[10][:-1])
 
-for p in product(range(teaspoons+1), repeat=4):
-    if sum(p) == teaspoons:
-        capacity = max(0, sum(map(lambda x, y: x['capacity']*y, ingredients.values(), p)))
-        durability = max(0, sum(map(lambda x, y: x['durability']*y, ingredients.values(), p)))
-        flavor = max(0, sum(map(lambda x, y: x['flavor']*y, ingredients.values(), p)))
-        texture = max(0, sum(map(lambda x, y: x['texture']*y, ingredients.values(), p)))
-        calories = max(0, sum(map(lambda x, y: x['calories']*y, ingredients.values(), p)))
+for c in combinations_with_replacement(range(teaspoons+1), 4):
+    if sum(c) == teaspoons:
+        for p in permutations(c):
+            capacity = max(0, sum(map(lambda x, y: x['capacity']*y, ingredients.values(), p)))
+            durability = max(0, sum(map(lambda x, y: x['durability']*y, ingredients.values(), p)))
+            flavor = max(0, sum(map(lambda x, y: x['flavor']*y, ingredients.values(), p)))
+            texture = max(0, sum(map(lambda x, y: x['texture']*y, ingredients.values(), p)))
+            calories = max(0, sum(map(lambda x, y: x['calories']*y, ingredients.values(), p)))
 
-        best_score = max(best_score, capacity * durability * flavor * texture)
-        if calories == 500:
-            best_score_with_500_cal = max(best_score_with_500_cal, capacity * durability * flavor * texture)
+            best_score = max(best_score, capacity * durability * flavor * texture)
+            if calories == 500:
+                best_score_with_500_cal = max(best_score_with_500_cal, capacity * durability * flavor * texture)
 
 print('Part 1: Best score = {}'.format(best_score))
 print('Part 2: Best score with exactly 500 cal = {}'.format(best_score_with_500_cal))
