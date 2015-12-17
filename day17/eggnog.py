@@ -8,7 +8,7 @@ def get_min_container_count(l):
     amount = 0
     for i, c in enumerate(l):
         amount += c
-        if amount >= LITER_EGGNOG:
+        if amount > LITER_EGGNOG:
             return i + 1
 
 min_container_count = get_min_container_count(containers[::-1])
@@ -18,7 +18,7 @@ sum_container_hold_eggnog = 0
 sum_min_containers_hold_eggnog = 0
 min_containers_hold_eggnog = len(containers)
 
-for i in range(min_container_count, max_container_count+1):
+for i in range(min_container_count, max_container_count):
     for c in combinations(containers, i):
         if sum(c) == LITER_EGGNOG:
             min_containers_hold_eggnog = min(min_containers_hold_eggnog, i)
