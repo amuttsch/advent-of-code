@@ -18,7 +18,7 @@ sum_container_hold_eggnog = 0
 sum_min_containers_hold_eggnog = 0
 min_containers_hold_eggnog = len(containers)
 
-for i in range(min_container_count, max_container_count):
+for i in range(min_container_count, max_container_count-1):
     for c in combinations(containers, i):
         if sum(c) == LITER_EGGNOG:
             min_containers_hold_eggnog = min(min_containers_hold_eggnog, i)
