@@ -127,3 +127,4 @@ print('Part 1: Player can win with spending a minimum of {} mana'.format(part_1)
 print('Part 2: Player can win with spending a minimum of {} mana'.format(part_2))
 
 assert part_1 == 1824
+assert part_2 == 1937
