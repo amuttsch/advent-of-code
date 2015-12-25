@@ -27,7 +27,8 @@ puzzles = [{'t': '--- Day 1: Not Quite Lisp ---', 'm': 'santa'},
            {'t': '--- Day 21: RPG Simulator 20XX ---', 'm': 'rpg'},
            {'t': '--- Day 22: Wizard Simulator 20XX ---', 'm': 'wizard'},
            {'t': '--- Day 23: Opening the Turing Lock ---', 'm': 'computer'},
-           {'t': '--- Day 24: It Hangs in the Balance ---', 'm': 'balance'}
+           {'t': '--- Day 24: It Hangs in the Balance ---', 'm': 'balance'},
+           {'t': '--- Day 25: Let It Snow ---', 'm': 'snow'}
           ]
 
 def execute_day(day):
