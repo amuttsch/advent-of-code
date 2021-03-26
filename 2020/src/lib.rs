@@ -3,12 +3,14 @@ use day02::Day02;
 use day03::Day03;
 use day04::Day04;
 use day05::Day05;
+use day06::Day06;
 
 mod day01;
 mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 pub trait AoC {
     fn day(&self) -> u8;
@@ -22,6 +24,7 @@ pub fn run_and_print_result() {
     run_day_and_print_result(Day03 {});
     run_day_and_print_result(Day04 {});
     run_day_and_print_result(Day05 {});
+    run_day_and_print_result(Day06 {});
 }
 
 fn run_day_and_print_result<T>(aoc: T)
