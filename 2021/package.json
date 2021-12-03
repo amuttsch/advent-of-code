@@ -1,0 +1,13 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "day01": "ts-node day01.ts",
+    "day02": "ts-node day02.ts",
+    "day03": "ts-node day03.ts"
+  },
+  "dependencies": {
+    "@types/node": "16.11.11",
+    "ts-node": "10.4.0",
+    "typescript": "4.5.2"
+  }
+}

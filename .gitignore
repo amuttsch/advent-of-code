@@ -3,3 +3,5 @@
 */__pycache__
 */.idea
 */target
+*/node_modules
+.idea/
